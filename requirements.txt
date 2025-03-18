@@ -140,17 +140,17 @@ ipywidgets
 #numpy
 
 # Data manipulation and analysis (built on numpy, 10-20 MB)
-#pandas
+pandas
 
 # ======================================================
 # VISUALIZATION
 # ======================================================
 
 # Core library for creating visualizations (~30 MB)
-matplotlib
+#matplotlib
 
 # Statistical data visualization library built on matplotlib (~2-5 MB)
-seaborn
+#seaborn
 
 # Interactive plotting library, often used with Shiny apps (~20-25 MB)
 #plotly
