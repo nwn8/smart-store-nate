@@ -1,4 +1,4 @@
-ProductID,ProductName,Category,UnitPrice,CurrentDiscountPercent,Subcategory
+ProductID,ProductName,Category,UnitPrice,DiscountPercent,Subcategory
 101,laptop,Electronics,793.12,10,Computers
 102,hoodie,Clothing,39.1,0,Tops
 103,cable,Electronics,22.76,15,Miscellaneous 
