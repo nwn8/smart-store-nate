@@ -3,3 +3,34 @@
 2025-03-18 07:56:17.562 | INFO     | __main__:read_raw_data:27 - Reading raw data from C:\Projects\smart-store-nate\data\raw\products_data.csv.
 2025-03-18 07:56:17.563 | INFO     | __main__:read_raw_data:27 - Reading raw data from C:\Projects\smart-store-nate\data\raw\sales_data.csv.
 2025-03-18 07:56:17.565 | INFO     | __main__:main:46 - Data preparation complete.
+2025-03-24 11:49:40.641 | INFO     | __main__:main:43 - Starting data preparation...
+2025-03-24 11:49:40.641 | INFO     | __main__:read_raw_data:27 - Reading raw data from C:\Projects\smart-store-nate\data\raw\customers_data.csv.
+2025-03-24 11:49:40.652 | INFO     | __main__:main:46 - Data preparation complete.
+2025-03-24 12:56:12.758 | INFO     | __main__:main:55 - Starting data preparation...
+2025-03-24 12:56:12.758 | INFO     | __main__:read_raw_data:28 - Reading raw data from C:\Projects\smart-store-nate\data\raw\customers_data.csv.
+2025-03-24 12:56:12.758 | INFO     | __main__:save_prepared_data:41 - Data saved to C:\Projects\smart-store-nate\data\prepared\customers_data_prepared.csv
+2025-03-24 12:56:12.773 | INFO     | __main__:main:58 - Data preparation complete.
+2025-03-24 13:00:33.466 | INFO     | __main__:main:55 - Starting data preparation...
+2025-03-24 13:00:33.466 | INFO     | __main__:read_raw_data:28 - Reading raw data from C:\Projects\smart-store-nate\data\raw\customers_data.csv.
+2025-03-24 13:01:11.047 | INFO     | __main__:main:56 - Starting data preparation...
+2025-03-24 13:01:11.047 | INFO     | __main__:read_raw_data:28 - Reading raw data from C:\Projects\smart-store-nate\data\raw\customers_data.csv.
+2025-03-24 13:01:11.057 | INFO     | __main__:save_prepared_data:41 - Data saved to C:\Projects\smart-store-nate\data\prepared\customers_data_prepared.csv
+2025-03-24 13:01:11.057 | INFO     | __main__:main:60 - Data preparation complete.
+2025-03-24 13:05:33.901 | INFO     | __main__:main:62 - Starting data preparation...
+2025-03-24 13:05:33.901 | INFO     | __main__:read_raw_data:28 - Reading raw data from C:\Projects\smart-store-nate\data\raw\customers_data.csv.
+2025-03-24 13:06:52.302 | INFO     | __main__:main:62 - Starting data preparation...
+2025-03-24 13:06:52.302 | INFO     | __main__:read_raw_data:28 - Reading raw data from C:\Projects\smart-store-nate\data\raw\customers_data.csv.
+2025-03-24 13:06:52.302 | INFO     | __main__:save_prepared_data:41 - Data saved to C:\Projects\smart-store-nate\data\prepared\customers_data_prepared.csv
+2025-03-24 13:06:52.302 | INFO     | __main__:main:66 - Data preparation complete.
+2025-03-24 13:08:27.246 | INFO     | __main__:main:56 - Starting data preparation...
+2025-03-24 13:08:27.246 | INFO     | __main__:read_raw_data:28 - Reading raw data from C:\Projects\smart-store-nate\data\raw\customers_data.csv.
+2025-03-24 13:08:27.253 | INFO     | __main__:save_prepared_data:41 - Data saved to C:\Projects\smart-store-nate\data\prepared\customers_data_prepared.csv
+2025-03-24 13:08:27.253 | INFO     | __main__:main:60 - Data preparation complete.
+2025-03-24 13:13:27.083 | INFO     | __main__:main:55 - Starting data preparation...
+2025-03-24 13:13:27.083 | INFO     | __main__:read_raw_data:27 - Reading raw data from C:\Projects\smart-store-nate\data\raw\products_data.csv.
+2025-03-24 13:13:27.083 | INFO     | __main__:save_prepared_data:40 - Data saved to C:\Projects\smart-store-nate\data\prepared\products_data_prepared.csv
+2025-03-24 13:13:27.099 | INFO     | __main__:main:59 - Data preparation complete.
+2025-03-24 13:22:37.419 | INFO     | __main__:main:54 - Starting data preparation...
+2025-03-24 13:22:37.419 | INFO     | __main__:read_raw_data:27 - Reading raw data from C:\Projects\smart-store-nate\data\raw\sales_data.csv.
+2025-03-24 13:22:37.427 | INFO     | __main__:save_prepared_data:40 - Data saved to C:\Projects\smart-store-nate\data\prepared\sales_data_prepared.csv
+2025-03-24 13:22:37.427 | INFO     | __main__:main:58 - Data preparation complete.
