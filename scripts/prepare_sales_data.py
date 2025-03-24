@@ -44,7 +44,7 @@ def process_data(file_name: str) -> None:
     df = read_raw_data(file_name)
     df.columns = df.columns.str.strip()  # Clean column names
     df = df.drop_duplicates()            # Remove duplicates
-
+    df['SaleAmount']=df['SaleAmount'].round(2)
     df = df.dropna(subset=['CustomerID'])  # Drop rows missing critical info
 
     return df
