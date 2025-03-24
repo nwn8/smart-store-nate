@@ -44,8 +44,9 @@ def process_data(file_name: str) -> None:
     df = read_raw_data(file_name)
     df.columns = df.columns.str.strip()  # Clean column names
     df = df.drop_duplicates()            # Remove duplicates
-
-    df['ProductName'] = df['ProductName'].str.strip()  # Trim whitespace from column values
+    df['UnitPrice']= df["UnitPrice"].round(2) # Make every dollar value two decimals
+    df['ProductName'] = df['ProductName'].str.strip() 
+    df['Subcategory'] = df['Subcategory'].str.strip() # Trim whitespace from column values
     df = df.dropna(subset=['ProductName', 'Category'])  # Drop rows missing critical info
 
     return df
