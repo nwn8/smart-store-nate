@@ -83,7 +83,7 @@ class TestDataScrubber(unittest.TestCase):
     def test_format_column_strings_to_upper_and_trim(self):
         df_formatted = self.scrubber.format_column_strings_to_upper_and_trim('Name')
         self.assertEqual(df_formatted['Name'].str.contains(' ').sum(), 0, "Strings not formatted to uppercase correctly 1")
-        #self.assertTrue(df_formatted['Name'].str.isupper().all(), "Strings not formatted to uppercase correctly")
+        self.assertTrue(df_formatted['Name'].str.isupper().all(), "Strings not formatted to uppercase correctly")
     
     def test_handle_missing_data(self):
         df_filled = self.scrubber.handle_missing_data(fill_value=0)
