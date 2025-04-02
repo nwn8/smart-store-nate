@@ -193,3 +193,13 @@ pandas
 # SpaCy: A powerful NLP library ~50 MB (core library; language models + ~300 MB or more per model).
 #spacy
 
+# ======================================================
+# DATABASES
+# ======================================================
+
+#sqlite3 comes with python - no need to install
+
+#the following are needed for mysql connection
+pymysql
+mysql-connector-python
+sqlalchemy
