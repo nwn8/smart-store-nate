@@ -14,4 +14,4 @@ Create_customer_table_mysql = "CREATE TABLE IF NOT EXISTS customer (CustomerID I
 
 Create_products_table_mysql = "CREATE TABLE IF NOT EXISTS product (ProductID INT PRIMARY KEY,ProductName VARCHAR(255),Category VARCHAR(255), UnitPrice DECIMAL, DiscountPercent INT, Subcategory VARCHAR(255));"
 
-Create_sale_table_mysql="CREATE TABLE IF NOT EXISTS sale (TransactionID INT PRIMARY KEY,CustomerID INT,ProductID INT, StoreID INT, CampaignID INT, SaleAmount DECIMAL,BonusPoints INT, PaymentType VARCHAR(255), FOREIGN KEY (CustomerID) REFERENCES customer (CustomerID),FOREIGN KEY (ProductID) REFERENCES product (ProductID));"
+Create_sale_table_mysql="CREATE TABLE IF NOT EXISTS sale (TransactionID INT PRIMARY KEY,SaleDate VARCHAR(255), CustomerID INT,ProductID INT, StoreID INT, CampaignID INT, SaleAmount DECIMAL,BonusPoints INT, PaymentType VARCHAR(255), FOREIGN KEY (CustomerID) REFERENCES customer (CustomerID),FOREIGN KEY (ProductID) REFERENCES product (ProductID));"

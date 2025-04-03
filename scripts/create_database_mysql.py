@@ -2,7 +2,7 @@ import pandas as pd
 import pathlib
 import sys
 import sql_commands
-import pymysql
+import MySQLdb
 from sqlalchemy import create_engine
 
 # For local imports, temporarily add project root to sys.path
@@ -15,7 +15,7 @@ DATA_DIR: pathlib.Path = PROJECT_ROOT.joinpath("data")
 PREPARED_DATA_DIR = DATA_DIR.joinpath("prepared")
 
 #database connection engine
-engine = create_engine("mysql+mysqlconnector://root:1234@localhost/Smart_Store")
+engine = create_engine("mysql+mysqldb://root:1234@localhost/Smart_Store", echo=True, future=True)
 
 def create_schema(cursor):
     """Create tables in the data warehouse if they don't exist."""
@@ -25,36 +25,36 @@ def create_schema(cursor):
 
 def delete_existing_records(cursor):
     """Delete all existing records from the customer, product, and sale tables."""
-    cursor.execute("DELETE FROM customer")
-    cursor.execute("DELETE FROM product")
-    cursor.execute("DELETE FROM sale")
+    cursor.execute("DELETE FROM customer;")
+    cursor.execute("DELETE FROM product;")
+    cursor.execute("DELETE FROM sale;")
 
 def insert_customers(customers_df: pd.DataFrame):
     """Insert customer data into the customer table."""
-    customers_df.to_sql("customer", con=engine, if_exists="append", index=False)
+    customers_df.to_sql(name="customer", con=engine, if_exists="append", index=False)
 
 def insert_products(products_df: pd.DataFrame):
     """Insert product data into the product table."""
-    products_df.to_sql("product", con=engine, if_exists="append", index=False)
+    products_df.to_sql(name="product", con=engine, if_exists="append", index=False)
 
-def insert_sales(sales_df: pd.DataFrame, cursor):
+def insert_sales(sales_df: pd.DataFrame):
     """Insert sales data into the sales table."""
-    sales_df.to_sql("sale", cursor.connection, if_exists="append", index=False)
+    sales_df.to_sql(name="sale", con=engine, if_exists="append", index=False)
 
 def load_data_to_db():
     try:
 
         #Connect to MYSQL installed locally
-        conn=pymysql.connect(host='localhost', user='root',password='1234')
+        conn= MySQLdb.connect(host='localhost', user='root',password='1234', database='Smart_Store')
         cursor=conn.cursor()
-        cursor.execute('CREATE DATABASE IF NOT EXISTS Smart_Store')
-        cursor.execute('USE Smart_Store')
+        #cursor.execute('CREATE DATABASE IF NOT EXISTS Smart_Store3;')
+        #cursor.execute('USE Smart_Store3;')
 
      
 
         # Create schema and clear existing records
         create_schema(cursor)
-        delete_existing_records(cursor)
+        #delete_existing_records(cursor)
 
 
         #this is a test script to write into the table.  the dataframes should be loaded using sqlalchemy.
@@ -63,13 +63,25 @@ def load_data_to_db():
         # Load prepared data using pandas
         customers_df = pd.read_csv(PREPARED_DATA_DIR.joinpath("customers_data_prepared.csv"))
         products_df = pd.read_csv(PREPARED_DATA_DIR.joinpath("products_data_prepared.csv"))
-        sales_df = pd.read_csv(PREPARED_DATA_DIR.joinpath("sales_data_prepared.csv"))
+        sales_df = pd.read_csv(PREPARED_DATA_DIR.joinpath("sales_data_prepared copy.csv"))
+        #print(customers_df)
 
         # Insert data into the database
-        #insert_customers(customers_df)
+        
+        insert_customers(customers_df)
         insert_products(products_df)
-        #insert_sales(sales_df, cursor)
-    
+        insert_sales(sales_df)
+        
+
+        
+        #this is to read from the database
+
+        #cursor.execute("Select * from sale;")
+        #myresult = cursor.fetchall()
+        #for x in myresult:
+         #   print(x)
+
+        
 
         conn.commit()
     finally:
