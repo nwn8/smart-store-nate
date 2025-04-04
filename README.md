@@ -22,7 +22,7 @@ create_database_sqlite will write to a sqlite database in the "data" folder.
 create_database_mysql will write to a locally installed mysql database with the user as root and password 1234
 
 
-** PowerBI Dashboard
+## PowerBI Dashboard
 
 Dashboard available at until 6/03/2025
 
