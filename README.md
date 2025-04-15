@@ -41,5 +41,5 @@ https://app.powerbi.com/links/4mJKjHMk8m?ctid=7335011f-1748-4902-8dee-6f4dac0368
 
 ## Section 4: Workflow and Logic
     Tables were imported into PowerBI in order to extract regional data.
-    ![alt text](<all regions.png>)
+    ![Graphics](<./all regions.png>)
 
