@@ -43,3 +43,33 @@ https://app.powerbi.com/links/4mJKjHMk8m?ctid=7335011f-1748-4902-8dee-6f4dac0368
     Tables were imported into PowerBI in order to extract regional data.
 
 ![allregions](images/allregions.png)
+
+## Section 5: Results
+North 
+
+![alt text](images/North.png)
+
+South
+
+![alt text](images/South.png)
+
+East
+
+![alt text](images/east.png)
+
+West
+
+![alt text](images/West.png)
+
+
+Conclusion:
+
+Laptop sales resulted in the highest dollar amount for each region, while The East Region had over 50K in Laptop sales, and sth South Region had over 17K.   Clothing was the second biggest sellar across all regions.  Sports were the least popular item across all regions. East and South produced the most revenue with east at 62K and South at 24K. 
+
+## Section 6: Suggested Business Action
+
+    East is the most active store by far while North has the least amount of sales.  Possible business actions could include marketing to the strengths of each store.  Because the North tends to Sell more Jackets and hats than electronics it may focus on strictly doing that or expand marketing to increase electronics sales
+
+
+## Section 7: Challenges
+    There were no challenges with this module. 
